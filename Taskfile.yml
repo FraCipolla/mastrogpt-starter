@@ -41,6 +41,7 @@ tasks:
         ignore_error: true
         cmds:
         - rm -v packages/*/*.zip
+        - rm -rf util/deploy/__pycache__
 
     setup: 
         desc: setup Nuvolaris MastroGPT
@@ -90,6 +91,7 @@ tasks:
         silent: true
         cmds:
         -   |
+            clear
             while ! test -e ~/.wskprops
             do
                 echo "*** Configuring Access to nuvolaris.dev with OpenAI ***"

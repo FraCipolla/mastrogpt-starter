@@ -40,6 +40,7 @@ class Invoker {
       json['state'] = this.state
     }
     // send the request
+    console.log(this.url)
     return fetch(this.url, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
@@ -48,7 +49,7 @@ class Invoker {
       .then(r => r.json())
       .then(r => {
         // got answer from the backend
-        console.log(r)
+        console.log("answer " + r)
         this.state = r.state
         let data = r
         let output = data.output
@@ -118,7 +119,6 @@ msgerForm.addEventListener("submit", event => {
     bot("Please select a chat, clicking on one button on the top area.")
   }
 });
-
 
 window.addEventListener('message', async function (ev) {
   console.log(ev);
