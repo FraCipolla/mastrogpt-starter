@@ -9,9 +9,13 @@ def main(arg):
                 "url": "mastrogpt/demo",
             },
             {
-                "name": "OpenAI",
+                "name": "Lookinglass",
                 "url": "openai/chat"
             },
+            {
+                "name": "OpenAI",
+                "url": "openai/gpt"
+            }
         ]
     }
     return {"body": data}

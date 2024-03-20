@@ -109,5 +109,7 @@ def main(args):
         output = ask(input)
         res = extract(output)
         res['output'] = output
+        if config.debug != "":
+            res['message'] = config.debug
     
     return {"body": res }
